@@ -1,3 +1,4 @@
+package Programmers;
 
 class Solution {// 숨어있는 숫자의 덧셈 (1)
 
