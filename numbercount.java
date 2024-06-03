@@ -1,5 +1,5 @@
-class Solution {
-    public int solution(int num, int k) {
+class numbercount {
+    public int numbercount(int num, int k) {
         int answer = 0;
         int count=0;
         int co=0;
