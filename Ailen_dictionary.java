@@ -1,5 +1,5 @@
-class Solution {
-    public int solution(String[] spell, String[] dic) {
+class Ailen_dictionary {
+    public int Ailen_dictionary(String[] spell, String[] dic) {
         int answer = 2;
         char[] combine = new char[spell.length];
         char temp=' '; //빈 문자 리터럴이 허용되지 않는다.
