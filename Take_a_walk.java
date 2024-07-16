@@ -9,22 +9,14 @@ class Take_a_walk {
                     north++;
                     break;
                 case 'S':
-                    
-north--
-;
+                    north--;
                     break;
                 case 'E':
-                    
-east++
-;
+                    east++;
                     break;
                 case 'W':
-                    
-east--
-;
-                    
-break
-;
+                    east--;
+                    break;
             }
         }
         answer[0] = east;
