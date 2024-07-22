@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
-class Solution {
-    public long solution(long n) {
+class Long_sort {
+    public long Long_sort(long n) {
         long answer = 0;
         
         String num = String.valueOf(n);
