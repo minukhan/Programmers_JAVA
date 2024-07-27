@@ -1,7 +1,5 @@
-import java.util.Arrays;
-
-class Solution {
-    public String[] solution(String[] strings, int n) {
+class Compare_to_study {
+    public String[] Compare_to_study(String[] strings, int n) {
         String temp;
 
         for (int j = 0; j < strings.length; j++) {
