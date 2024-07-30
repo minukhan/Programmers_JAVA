@@ -1,5 +1,5 @@
-class Solution {
-    public String[] solution(int n, int[] arr1, int[] arr2) {
+class Secret_map {
+    public String[] Secret_map(int n, int[] arr1, int[] arr2) {
         String[] answer = new String[n];
         int[][] square = new int[n][n];
         int[][] square2 = new int[n][n];
