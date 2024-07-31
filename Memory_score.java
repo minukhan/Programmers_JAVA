@@ -1,5 +1,4 @@
 class Memory_score {
-
     public int[] Memory_score(String[] name, int[] yearning, String[][] photo) {
 
         int[] answer = new int[photo.length];
@@ -17,6 +16,7 @@ class Memory_score {
             }
         }
 
+        
         return answer;
 
     }
