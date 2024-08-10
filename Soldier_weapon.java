@@ -15,6 +15,7 @@ class Soldier_weapon {
                 }
             }
             
+            
             if(count>limit){
                 answer+= power;
             }
