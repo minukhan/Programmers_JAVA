@@ -8,6 +8,7 @@ class Prime_number_making {
         boolean finish=true;
         int count=0;
         
+        
         while(finish){
             number = nums[i] + nums[j] + nums[k];
             count=0;
