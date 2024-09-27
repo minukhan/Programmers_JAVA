@@ -17,7 +17,6 @@ class ad_delete {
             }
         }
         
-        
         return answer;
     }
 }
