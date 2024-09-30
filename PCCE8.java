@@ -16,7 +16,7 @@ class Solution {
 
                 answer += "vv";
 
-            }
+            }   
 
             else if(nickname.charAt(i) == 'W'){
 
