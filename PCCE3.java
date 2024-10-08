@@ -1,10 +1,9 @@
 import java.util.Scanner;
 
-​
 
-public class Solution {
+public class PCCE3 {
 
-    public static void main(String[] args) {
+    public static void PCCE3(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
@@ -22,7 +21,6 @@ public class Solution {
 
         }
 
-​
 
         System.out.println(answer);
 

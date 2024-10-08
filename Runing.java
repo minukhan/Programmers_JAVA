@@ -3,9 +3,9 @@ import java.util.HashMap;
 import java.util.Set;
 
 
-class Solution {
+class Runing {
 
-    public String[] solution(String[] players, String[] callings) {
+    public String[] Runing(String[] players, String[] callings) {
 
         
 

@@ -1,6 +1,6 @@
-class Solution {
+class PCCE8 {
 
-    public String solution(String nickname) {
+    public String PCCE8(String nickname) {
 
         String answer = "";
 

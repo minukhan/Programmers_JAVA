@@ -1,12 +1,11 @@
-class Solution {
+class PCCE5 {
 
-    public int[] solution(String[] cpr) {
+    public int[] PCCE5(String[] cpr) {
 
         int[] answer = {0, 0, 0, 0, 0};
 
         String[] basic_order = {"check", "call", "pressure", "respiration", "repeat"};
 
-​
 
         for(int i=0; i<
 

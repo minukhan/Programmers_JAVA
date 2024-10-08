@@ -1,5 +1,5 @@
-class Solution {
-    public int solution(String s) {
+class String_seperate {
+    public int String_seperate(String s) {
         
         char[] arr = s.toCharArray();
         
