@@ -44,4 +44,4 @@ class String_seperate {
     }
 }
 
-//log test study
+//log test study main
