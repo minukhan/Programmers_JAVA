@@ -1,4 +1,4 @@
-class Personal_code {
+class Personal_codeg {
     public String Personal_code(String s, String skip, int index) {
         
         String answer = "";
