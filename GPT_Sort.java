@@ -1,9 +1,9 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class GPT_Sort {
 
-    public static void main(String[] args) throws IOException {
+    public static void GPT_Sort(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
