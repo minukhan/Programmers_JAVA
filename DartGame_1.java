@@ -1,5 +1,5 @@
-class Solution {
-    public int solution(String dartResult) {
+class DartGame_1 {
+    public int DartGame_1(String dartResult) {
         int answer = 0;
         int[] numberarr = new int[3];
         String num = "";
