@@ -1,3 +1,6 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 class number_sort {
     public static void number_sort(String[] args) throws IOException {
 
