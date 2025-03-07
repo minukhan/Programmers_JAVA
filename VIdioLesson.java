@@ -1,10 +1,10 @@
 import java.util.*;
 import java.io.*;
 
-class NumberCard2ByBinarySearch {
+class VIdioLesson {
     public static int[] vidio;
 
-    public static void NumberCard2ByBinarySearch(String[] args) throws IOException {
+    public static void VIdioLesson(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
