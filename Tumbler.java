@@ -3,7 +3,7 @@ import java.lang.*;
 import java.io.*;
 
 // The main method must be in a class named "Main".
-class Main {
+class Tumbler {
 
     public static boolean[][][] visited;
     public static int[] limit;
@@ -21,7 +21,7 @@ class Main {
         }
     }
     
-    public static void main(String[] args) throws IOException {
+    public static void Tumbler(String[] args) throws IOException {
 
         BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
 
