@@ -2,14 +2,14 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-class Main {
+class EggsAttackEggs {
 
     public static int N;
     public static int max;
     public static int[] weight;
     public static int[] heart;
     
-    public static void main(String[] args) throws IOException{
+    public static void EggsAttackEggs(String[] args) throws IOException{
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
