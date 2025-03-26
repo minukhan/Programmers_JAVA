@@ -1,4 +1,5 @@
 import java.lang.*;
+import java.util.PriorityQueue;
 import java.io.*;
 
 class boj_1715 {
@@ -7,7 +8,6 @@ class boj_1715 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         PriorityQueue<Integer> queue = new PriorityQueue<>((o1,o2) -> o1 - o2);
-
         for(int i=0;i<N;i++){
             queue.add(Integer.parseInt(br.readLine()));
         }
