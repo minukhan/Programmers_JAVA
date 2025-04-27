@@ -1,69 +1,80 @@
 import java.util.*;
 import java.lang.*;
 import java.io.*;
-//3:12
 
-// 1부터 N까지 번호가 매겨져 있는 도시들이 있다. 
-// 도시들 사이에는 길이 있는데 없을 수 있다. 
-// 한 도시에서 출발해서 N개의 도시를 모두 거쳐 다시 원래의 도시로 돌아오는 순회여행경로
-// 를 계획하려고한다. 이떄 한번 갔던 도시로는 다시 갈 수 없음.
-// 여러가지의 경로가 있을 수 있는데 가장 적은 비용을 들이는 여행계획을 세우고자한다. 
-// 비용은 대칭적이지 않고 모든 도시간의 비용은 양의 정수
-// 도시에서 도시로 비용이 0인경우에는 갈 수 없는것. 가장 적은 비용으로 여행 경로를 찾아.
-// 비용은 1,000,000 이고 N은 10이므로 총 100개가 가능. 이때 다 돈다해도 1억이므로 int가능
-// 다익스트라는 최단거리로 가는것만이니까 돌아오는것도 중복이 안되니까 안될듯.
-// 그럼 완전탐색임. -> N 은 10이므로 최악 10! 인데 종료조건이 있으니까 ㄱㅊ을듯.
-// 종료조건은 그러면 N인가? count 를 이용해서? 중복안되는 순열? visited
+
+// 3:46
+
+// 직사각형 모양의 격자판이 있다.
+// 격자판의 비어있는 칸을 임의로 골라 네모를 올려놓는다.
+// 네모가 올라간 칸 4개가 2*2 사각형을 이루는 부분을 찾아 네모를 모두 없애는 과정 반복
+// 적당히 플레이하다가 격자판 위에 없앨 수 있는 네모가 없다면 게임을 그만.
+// 네모가 게임을 그만두었을때 네모의 배치의 가짓수를 구해라.
+// 최대 25개이므로 25!? 음..
+// 일단 뺵트래킹인데 2개로 나뉘는듯. 네모를 두는거랑 네모를 없애는 행위.
+// 네모를 없애는 행위를 할때 만약 격자판 위에 없앨 수 있는게 없다면 그만둠.
+// 종료 조건을 어떻게 설정할까 흠.. 최대 갯수보다 횟수? 횟수 괜찮은데
+// 횟수가 5*5 면 2의 25승이라 되네?? int 가능
+// 아니 2*2 이거 없애는걸 고려를 안해도 되네. 그냥 만들때 그거를 생성하지 않도록 하는
+// 경우의수를 구하면 되는문제.
+// 순서대로 탐색을 이어나가니까 왼쪽 위 , 위, 왼쪽만 고려하면 됨.
+
 class boj_14712 {
-    
-    public static int[][] cost;
+
     public static int N;
-    public static int[] visited;
-    public static int min;
-    public static int init;
-    
-    public static void main(String[] args) throws IOException {
+    public static int M;
+    public static int answer;
+    public static int total;
+    public static int[][] visited;
+
+    public static void main(String[] args) throws IOException{
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        N = Integer.parseInt(br.readLine());
-        StringTokenizer st;
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        cost = new int[N][N];
-        visited = new int[N];
-        min = Integer.MAX_VALUE;
-            
-        for(int i=0;i<N;i++){
-            st = new StringTokenizer(br.readLine());
-            for(int j=0;j<N;j++){
-                cost[i][j] = Integer.parseInt(st.nextToken());
-            }
-        }
+        N = Integer.parseInt(st.nextToken());
+        M = Integer.parseInt(st.nextToken());
 
-        for(int i=0;i<N;i++){
-            init = i;
-            dfs(0,0,i);
-        }
+        visited = new int[N][M];
+
+        dfs(0,0);
         
-        System.out.println(min);
+        System.out.println(answer);
+        
     }
 
-    public static void dfs(int count, int sum, int current){
+    public static void dfs(int x, int y){
 
-        if(count == N){
-            if(current == init){
-                min = Math.min(min, sum);
-            }
+        if(y == N){
+            answer++;
             return;
         }
 
-        for(int i=0;i<N;i++){
+        int nextX = x+1;
+        int nextY = y;
 
-            if(visited[i] == 1) continue;
-            if(cost[current][i] == 0) continue;
-
-            visited[i] = 1;
-            dfs(count + 1, sum + cost[current][i], i);
-            visited[i] = 0;
+        if(nextX == M){
+            nextX = 0;
+            nextY = y+1;
         }
+
+        dfs(nextX,nextY); // 놓지 않는 경우
+
+        boolean check = false;
+
+        if(x>0 && y>0){
+            if(visited[y-1][x-1] == 1
+            && visited[y-1][x]   == 1
+            && visited[y][x-1]   == 1){
+                check = true;
+            }
+        }
+
+        if(!check){
+            visited[y][x] = 1;
+            dfs(nextX,nextY);
+            visited[y][x] = 0;
+        }
+        
     }
 }
