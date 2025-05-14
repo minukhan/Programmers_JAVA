@@ -3,7 +3,7 @@ import java.lang.*;
 import java.io.*;
 
 
-class boj_14501 {
+class boj_15486 {
     public static void main(String[] args) throws IOException{
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
