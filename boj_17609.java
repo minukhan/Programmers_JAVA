@@ -2,15 +2,6 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-// 9:12
-
-// 1. 회문인지 아닌지 판단.
-// 2. 만약 회문이 아니라면 그 오른쪽 무시하고 진행
-// 3. 그랬을때 아니라면 왼쪽도 진행. 둘다 아니라면 
-// 4. 유사회문도 아닌것. 
-// 자료구조는 뭘 사용? 
-// 배열로 해도 문제없을듯. 
-
 class boj_17609 {
 
     public static int answer=0;
