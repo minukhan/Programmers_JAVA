@@ -2,7 +2,7 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-class Main {
+class boj_22251 {
     
     public static int[][] changeCost = {
             {0, 4, 3, 3, 4, 3, 2, 3, 1, 2},
