@@ -21,7 +21,7 @@ import java.io.*;
 // 정렬때리면 A~ Z 까지 정렬될꺼고 앞쪽으로 처리? 
 // 
 
-class Main {
+class boj_14426 {
     public static String[] arr;
     
     public static void main(String[] args) throws IOException{
